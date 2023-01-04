@@ -1,0 +1,167 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Meetings cost calculator</h1>
+    <div class="wrapper">
+
+        <!-- Table 1 -->
+        <div class="tab">
+            <table>
+                <tr>
+                    <th colspan="2">Fill in your meeting details here </th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>How many meetings do you have in a day?</td>
+                    <td><input type="number" id="noOfMeeting" onchange="myFunction()" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>No. of days you work in a week</td>
+                    <td><input type="number" id="noOfWorkingDays" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Duration of each meeting (minutes)</td>
+                    <td><input type="number" id="meetingDuration" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>No. of participants per meeting including you</td>
+                    <td><input type="number" id="noOfParticipants" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Average hourly rate of the participants</td>
+                    <td><input type="number" id="avgRate" /></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Table 2 -->
+        <div class="tab">
+            <table>
+                <tr>
+                    <th colspan="2">How much do meetings cost you in time and money?</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <select id="costBasis" onchange="calculate()">
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Time spent by all participants (hours)</td>
+                    <td><input type="number" id="timeSpent" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Total cost of meetings</td>
+                    <td><input type="number" id="costSpent" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <!-- Table 3 -->
+        <div class="tab">
+
+            <table>
+                <tr>
+                    <th colspan="3">How much can you save if you cut down meetings?</th>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: center;">
+                        <select id="savingBasis" onchange="calculate()">
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>You save this much time (Hours)</td>
+                    <td>You save this much money</td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td>If you reduce 1 meeting</td>
+                    <td><input type="number" id="savedHrPerMeeting" /></td>
+                    <td><input type="number" id="savedCostPerMeeting" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td>If you cut down the meeting duration by 5 minutes</td>
+                    <td><input type="number" id="savedHrPerMin" /></td>
+                    <td><input type="number" id="savedCostPerMin" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3"></td>
+                </tr>
+                <tr>
+                    <td>If you do both</td>
+                    <td><input type="number" id="totalTimeSave" /></td>
+                    <td><input type="number" id="totalMoneySave" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <button onclick="calculate()">Calculate</button>
+    <script src="./index.js"></script>
+</body>
+
+</html>

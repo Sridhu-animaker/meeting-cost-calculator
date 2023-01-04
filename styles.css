@@ -1,0 +1,49 @@
+        * {
+            font-family: vm-poppins;
+            text-align: center;
+        }
+
+        table {
+            /* font-family: vm-poppins; */
+            border-collapse: collapse;
+        }
+
+        td,
+        input,
+        select {
+            border: 1px solid #885efd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            border: 1px solid #885efd;
+            text-align: center;
+            color: #454457;
+            font-size: 20px;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #885efd;
+            height: 30px;
+        }
+
+        .wrapper {
+            display: flex;
+        }
+
+        .tab {
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            color: antiquewhite;
+            background-color: #885efd;
+            border-radius: 5px;
+        }
