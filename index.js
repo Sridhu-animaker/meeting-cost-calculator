@@ -15,11 +15,11 @@ function calculate() {
     savingBasis = document.getElementById("savingBasis").value;
 
     if (costBasis == "weekly") {
-        timeSpent = ((noOfMeeting * noOfWorkingDays * meetingDuration * noOfParticipants) / 60).toFixed(4); //E8
-        costSpent = (timeSpent * avgRate).toFixed(4); //E11
+        timeSpent = Math.round(((noOfMeeting * noOfWorkingDays * meetingDuration * noOfParticipants) / 60).toFixed(4)); //E8
+        costSpent = Math.round((timeSpent * avgRate)); //E11
     } else {
-        timeSpent = (((noOfMeeting * noOfWorkingDays * meetingDuration * noOfParticipants / 60) * 4.33)).toFixed(4);
-        costSpent = (timeSpent * avgRate).toFixed(4);
+        timeSpent = Math.round((((noOfMeeting * noOfWorkingDays * meetingDuration * noOfParticipants / 60) * 4.33)).toFixed(4));
+        costSpent = Math.round((timeSpent * avgRate));
     }
 
     if (savingBasis == "weekly") {
